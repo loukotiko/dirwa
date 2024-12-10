@@ -36,24 +36,40 @@ watch(game.hero.special, (special) =>
 </script>
 
 <template>
-  <div class="bars rpgui-container framed-grey">
-    <div class="bar rpgui-container">
+  <div class="rpgui-container">
+    <div class="rpgui-container">
       <label>Vitalité</label>
       <div class="rpgui-progress green" ref="vitalityBar"></div>
     </div>
-    <div class="bar rpgui-container">
+    <div class="rpgui-container">
       <label>Force</label>
       <div class="rpgui-progress red" ref="strengthBar"></div>
     </div>
-    <div class="bar rpgui-container">
+    <div class="rpgui-container">
       <label>Agilité</label>
       <div class="rpgui-progress blue" ref="agilityBar"></div>
     </div>
-    <div class="bar rpgui-container">
+    <div class="rpgui-container">
       <label>Spécial</label>
       <div class="rpgui-progress purple" ref="specialBar"></div>
+    </div>
+    <div class="slots rpgui-container">
+      <div class="rpgui-icon empty-slot"></div>
+      <div class="rpgui-icon empty-slot"></div>
+      <div class="rpgui-icon empty-slot"></div>
+      <div class="rpgui-icon empty-slot"></div>
+      <div class="rpgui-icon empty-slot"></div>
+      <div class="rpgui-icon empty-slot"></div>
     </div>
   </div>
 </template>
 
-<style scoped></style>
+<style scoped>
+.slots {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  grid-gap: 10px;
+  margin-top: 20px;
+}
+</style>

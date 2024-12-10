@@ -18,4 +18,17 @@ provide("game", game);
   </div>
 </template>
 
-<style scoped></style>
+<style scoped>
+.rpgui-content {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+</style>
