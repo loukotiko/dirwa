@@ -15,5 +15,8 @@ export function useHero(): Hero {
     increaseVitality() {
       this.vitality.value++;
     },
+    increaseStrength() {
+      this.strength.value++;
+    },
   };
 }

@@ -1,26 +1,22 @@
 <script setup lang="ts">
-import { provide } from 'vue'
+import { provide } from "vue";
+import Introduction from "./components/Introduction.vue";
+import EventManager from "./components/EventManager.vue";
 
-import { useHero } from "./hero/Hero.ts"
+import { useGame } from "./objects/Game.ts";
 
-import HelloWorld from "./components/HelloWorld.vue";
-// Start a new game
-
-// Save hero
-const hero = useHero();
-provide('hero', hero)
-
-// Save progression
+const game = useGame();
+provide("game", game);
 
 // Display event
 // Fight event or progress event
 
 // Display fight
-
 </script>
 
 <template>
-  <HelloWorld msg="Test" />
+  <Introduction v-if="!game.started.value" />
+  <EventManager v-else />
 </template>
 
 <style scoped></style>
