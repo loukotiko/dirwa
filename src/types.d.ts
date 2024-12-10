@@ -3,6 +3,7 @@ import { Ref } from "vue";
 export type Game = {
   hero: Hero;
   story: Story;
+  allies: Allies;
   started: Ref<boolean>;
   start: () => void;
 };
@@ -25,3 +26,18 @@ export type Story = {
 };
 
 export type Event = string;
+
+export type Ally = {
+  name: string;
+  mainAbility: Ability;
+};
+
+export type Allies = {
+  all: Ref<Ally[]>;
+  addAlly: (ally: Ally) => void;
+};
+
+export type Ability = {
+  name: string;
+  effect: (game: Game) => void;
+};

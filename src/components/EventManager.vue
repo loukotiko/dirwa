@@ -1,4 +1,6 @@
 <script setup lang="ts">
+declare const RPGUI: any;
+
 import { inject } from "vue";
 import { Game } from "../types";
 const game = inject<Game>("game")!;
@@ -11,7 +13,6 @@ const events: Record<string, any> = { Event1, Event2 };
 
 <template>
   <component :is="events[game.story.lastEvent]" />
-  <button @click="game.story.next()">Next</button>
 </template>
 
 <style scoped></style>

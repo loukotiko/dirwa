@@ -7,16 +7,15 @@ import { useGame } from "./objects/Game.ts";
 
 const game = useGame();
 provide("game", game);
-
-// Display event
-// Fight event or progress event
-
-// Display fight
 </script>
 
 <template>
-  <Introduction v-if="!game.started.value" />
-  <EventManager v-else />
+  <div class="rpgui-content rpgui-cursor-default">
+    <div id="container">
+      <Introduction v-if="!game.started.value" />
+      <EventManager v-else />
+    </div>
+  </div>
 </template>
 
 <style scoped></style>
